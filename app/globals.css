@@ -1,26 +1,123 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  margin: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Style the header with a grey background and some padding */
+.header {
+  position: fixed; /* Make the header stick at the top */
+  top: 0; /* Align it to the top of the page */
+  width: 100%; /* Ensure the header spans the entire width */
+  background-color: #f1f1f1;
+  padding: 10px 20px; /* Adjust padding for spacing */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for separation */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Additional adjustments for header links and layout */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header-right {
+  float: right;
+}
+
+/* Style the active/current link */
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.parent {
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr) auto auto; /* Add auto rows for div5 and div6 */
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  height: auto; /* Allow the page to expand beyond 100vh */
+  min-height: 100vh; /* Ensure at least the full viewport height */
+}
+
+.div1 {
+  grid-area: 1 / 1 / 4 / 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.div2 {
+  grid-area: 4 / 1 / 6 / 3;
+  background-color: #003B6D;
+  padding: 20px;
+}
+
+.div3 {
+  grid-area: 4 / 3 / 6 / 5;
+  background-color: #003B6D;
+  padding: 20px;
+}
+
+.div4 {
+  grid-area: 4 / 5 / 6 / 7;
+  background-color: #003B6D;
+  padding: 20px;
+}
+
+.div5 {
+  grid-area: 6 / 1 / 7 / 7; /* Make div5 span the full width */
+  background-color: #004B8D;
+  padding: 20px;
+}
+
+.div6 {
+  grid-area: 7 / 1 / 8 / 7; /* Make div6 span the full width */
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em; /* Set consistent font size for all headers */
+  margin: 10px 0; /* Add some margin for spacing between headers */
+}
+
+p {
+  color: white;
+  text-align: center;
+  margin: 10px 0; /* Margin to separate paragraphs from headers */
+  font-size: 1.2em; /* Set font size for paragraphs */
+}
+
+/* Ensure divs and texts are aligned and styled correctly */
+.div2 p, .div3 p, .div4 p, .div5 p, .div6 p {
+  color: white;
+  text-align: center;
+  margin: 0;
 }
