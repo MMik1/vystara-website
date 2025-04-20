@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  background-color: #003B6D;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 10px 5px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header-right {
+  float: right;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.parent {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.Game {
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+  background-image: url("../../public/img/background.png");
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url("../../public/img/Randy.png");
+  background-size: 50px 50px;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% { top: 150px; }
+  30% { top: 130px; }
+  50% { top: 80px; }
+  80% { top: 130px; }
+  100% { top: 150px; }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  background-image: url("../../public/img/cactus.png");
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+  position: absolute;
+  top: 160px;
+  left: 600px;
+}
+
+.cactus {
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% { left: 600px; }
+  100% { left: -20px; }
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.game-over {
+  margin-top: 20px;
+  height: 160px;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  color: #fff;
+  animation: fadeIn 0.4s ease;
+}
+
+.game-over h2 {
+  margin-bottom: 10px;
+}
+
+.game-over p {
+  margin: 5px 0;
+}
+
+.game-over button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.game-over button:hover {
+  border-style: solid;
+  border-color: #ffffff;
+  background-color: #ff1a1a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

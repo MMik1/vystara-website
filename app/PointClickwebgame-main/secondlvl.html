@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/secondlvl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Protest+Riot&display=swap"
+        rel="stylesheet">
+
+    <title>point and click adventure</title>
+</head>
+
+<body>
+    <div id="title">
+        <h1 id="mainTitle"></h1>
+    </div>
+
+    <div id="gameWindow">
+        <!--dialog bar-->
+        <div id="dialogBar" class="foreground">
+            <div id="setMainDialog">
+                <div id="mainCharacterAvatar" class="foreground">
+                    <img src="../../public/img/portairt.png" alt="main character avatar">
+                </div>
+                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterAvatar" class="foreground">
+                    <img id="counterAvatarImg" src="../../public/img/ghost_speak.png" alt="counter avatar">
+                </div>
+                <div id="counterAvatar2" class="foreground">
+                    <img id="counterAvatarImg2" src="../../public/img/Jaydeededraak.png" alt="counter avatar2">
+                </div>
+                <div id="brownBar"></div>
+            </div>
+        </div>
+
+        <!-- inventory -->
+        <div id="inventoryBox" class="foreground">
+            <p>Inventory</p>
+            <ul id="inventoryList">
+
+            </ul>
+
+        </div>
+
+        <!--Foreground items-->
+
+        <div id="sign" class="foreground"></div>
+        <div id="AfterEffects" class="foreground"></div>
+
+        <!--Main character-->
+        <div id="mainCharacter" class="heroCharacter">
+            <img id="mcImage" draggable="false" src="../../public/img/animated-character-1-idle.gif" alt="main character">
+        </div>
+
+        <!--Background-->
+        <div id="tilemap" class="background">
+            <img src="../../public/img/tilemap2.png" draggable="false" alt="tilemap level 1">
+        </div>
+    </div>
+
+    <audio id="mcAudio">
+        <source src="../../public/audio/Gibberish - Sound Effect_01.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="kAudio">
+        <source src="../../public/audio/knock.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="krAudio">
+        <source src="../../public/audio/Jaydee.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="dAudio">
+        <source src="../../public/audio/Deur opening.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="pAudio">
+        <source src="../../public/audio/papier.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="draakAudio">
+        <source src="../../public/audio/Draakje.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="mrAudio">
+        <source src="../../public/audio/La Casa De Papel - Bella Ciao [Lyrics] (Money Heist).mp3" type="audio/mpeg">
+    </audio>
+    <audio id="cAudio">
+        <source src="../../public/audio/CONSTRUCTION SOUND EFFECTS.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/secondmain.js"></script>
+</body>
+
+</html>
