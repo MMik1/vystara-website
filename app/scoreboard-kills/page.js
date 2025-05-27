@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import React from 'react';
 import Countdown from 'react-countdown';
 
-export default function BouwersPage() {
+export default function scoreboard() {
     const playerNames = [
         "1KillvoorMij", "Player2", "Player3", "Player4", "Player5",
         "Player6", "Player7", "Player8", "Player9", "Player10"
@@ -17,14 +17,14 @@ export default function BouwersPage() {
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
             />
-            <div className="header">
+            <header className="header">
                 <a href="/home" className="logo">Vystara</a>
-                <div className="header-right">
-                    <a className="active" href="/home">Nav1</a>
+                <nav className="header-right">
+                    <a href="/home">Nav1</a>
                     <a href="/bouwers">Nav2</a>
                     <a href="/login">Admin Login</a>
-                </div>
-            </div>
+                </nav>
+            </header>
             <div className="parent">
                 <div className="hero-overlay">
                     <div className="diagonal-line" />
